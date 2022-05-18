@@ -1,0 +1,11 @@
+SoleCycle
+
+A marketplace to sell your sneakers. Reduce waste by giving your old shoes a new life.
+
+1. Create a listing
+2. View a listing (details)
+3. Update a listing
+4. Delete a listing
+5. Add to cart
+6. Upload images to application
+7. Apply validations

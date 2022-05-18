@@ -1,0 +1,75 @@
+.App{
+  height: 1200px;
+  width: 100%;
+  background-image: url(https://img.freepik.com/free-vector/pastel-vector-dull-pastel-abstract-textured-background_53876-110546.jpg?t=st=1652378673~exp=1652379273~hmac=ad1ca6316ed74421307d467568ee84c9d229b1e7ddd64db56d07f12c64ad4945&w=1800);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-image: url(https://img.freepik.com/free-vector/pastel-vector-dull-pastel-abstract-textured-background_53876-110546.jpg?t=st=1652378673~exp=1652379273~hmac=ad1ca6316ed74421307d467568ee84c9d229b1e7ddd64db56d07f12c64ad4945&w=1800);
+  height: 500px;
+  width: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errors{
+  color: red;
+  margin-left: 50px;
+}
+
+.logreg{
+  display: flex;
+  justify-content: space-evenly;
+}
+.submit-button{
+  margin-top: 10px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.Form{
+  margin-left: 50px;
+}
+#cardInfo{
+  background-image: url(https://img.freepik.com/free-vector/pastel-vector-dull-pastel-abstract-textured-background_53876-110546.jpg?t=st=1652378673~exp=1652379273~hmac=ad1ca6316ed74421307d467568ee84c9d229b1e7ddd64db56d07f12c64ad4945&w=1800);
+  margin-left: auto;
+  margin-right: auto;
+}
+.newSneaker{
+  margin-left: 50px;
+}
+.update-header{
+  margin-left: 50px;
+}
+.actionButton{
+  margin: 2px;
+}

@@ -1,0 +1,22 @@
+[REQUIRED] Name: Derek Hong
+[REQUIRED] Project Title: SoleCycle
+[REQUIRED] Project Stack: MERN
+[REQUIRED] GitHub Repo Link: https://github.com/derekhongg/sole-cycle
+
+[REQUIRED] Project Description: Used Marketplace for sneakers. Users can add items to a cart and purchase. Leave reviews of the seller. 
+Users can - Create, Read, Update, or Delete Sneakers.
+
+[REQUIRED] New Programming Concept(s) I'm Planning to Learn: Hope to learn file uploading. Many to Many relationship
+-
+
+[REQUIRED] Week 1 Features (to show at Review during Week 2)
+- Complete CRUD
+- Barebones setting
+
+
+[REQUIRED] Week 2 Features (to show at first office hour/lecture of Week 3)
+- ***Finish CSS work (could be Bootstrap or another framework too instead of CSS)***
+- Work on many-to-many relationship to leave reviews. 
+
+[REQUIRED] Product Backlog (If I have more time after completing my MVP, I'll start to work on...)
+- 
