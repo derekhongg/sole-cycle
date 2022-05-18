@@ -29,10 +29,10 @@ const ShoeSchema = new mongoose.Schema({
         type: Number,
         required: [true, "Shoe Price is required."]
     },
-    user_id: {
+    user_id: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-    },
+    }],
     comments: [{type: mongoose.Schema.Types.ObjectId, ref: "Comment"}],
 }, {timestamps: true})
 

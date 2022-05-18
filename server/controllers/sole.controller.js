@@ -22,7 +22,7 @@ const findAllShoes = async(req, res) => {
 
 const findOneShoe = (req, res) => {
     const {params} = req;
-    Shoe.findOne({id: params.id})
+    Shoe.findOne({_id: params.id})
         .then((oneShoe) => res.json(oneShoe))
         .catch((err) => res.status(400).json(err))
 };

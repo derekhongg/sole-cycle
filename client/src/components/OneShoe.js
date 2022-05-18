@@ -26,6 +26,7 @@ const OneShoe = (props) => {
     useEffect(() => {
         axios.get(`http://localhost:8000/api/user/${id}`)
             .then((res) => {
+                console.log("----------");
                 console.log(res.data);
                 setOneUser(res.data);
             })
@@ -52,7 +53,7 @@ const OneShoe = (props) => {
                     <Card.Text>Color: {oneShoe.color}</Card.Text>
                     <Card.Text>Description: {oneShoe.description}</Card.Text>
                     <Card.Text>Price: ${oneShoe.price}</Card.Text>
-                    <Card.Text>Posted by: {oneUser.firstName} {oneUser.lastName}</Card.Text>
+                    {/* <Card.Text>Posted by: {oneUser.firstName}</Card.Text> */}
                     <Button className="actionButton" onClick={() => navigate("/home")}>Home</Button>
                     <Button variant="danger" onClick={() => handleDelete(oneShoe._id)}>Delete</Button>
                 </Card.Body>

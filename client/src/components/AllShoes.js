@@ -83,8 +83,8 @@ const AllShoes = (props) => {
                         {
                             shoeList.map((item, index) => {
                                 return(
-                                <tr key={index}>
-                                    <td><Link to={`/shoes/${item.id}`}>
+                                <tr name={item.name} size={item.size} color={item.color} price={item.price} item={item} key={index}>
+                                    <td><Link to={`/shoes/${item._id}`}>
                                         {item.name}
                                     </Link>
                                     </td>
@@ -92,10 +92,10 @@ const AllShoes = (props) => {
                                     <td>{item.color}</td>
                                     <td>${item.price}</td>
                                     <td>
-                                        <Button className="actionButton" variant="success" size="sm" onClick={() => navigate(`/shoes/edit/${item.id}`)}>
+                                        <Button className="actionButton" variant="success" size="sm" onClick={() => navigate(`/shoes/edit/${item._id}`)}>
                                             Edit
                                         </Button>
-                                        <Button className="actionButton" variant="primary" size="sm" onClick={() => addItem(props.item)}>
+                                        <Button className="actionButton" variant="primary" size="sm" onClick={() => addItem(item._id)}>
                                             Add to Cart
                                         </Button>
                                     </td>
