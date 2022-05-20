@@ -24,14 +24,14 @@ const OneShoe = (props) => {
     }, [id]);
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/user/${id}`)
+        axios.get(`http://localhost:8000/api/user/${id}`, { withCredentials: true })
             .then((res) => {
                 console.log("----------");
                 console.log(res.data);
                 setOneUser(res.data);
             })
             .catch((err) => console.log(err))
-    }, [id]);
+    }, []);
 
     const handleDelete = (shoeId) => {
         axios.delete(`http://localhost:8000/api/shoes/${shoeId}`, {withCredentials:true})
