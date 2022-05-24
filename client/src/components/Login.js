@@ -22,6 +22,7 @@ const Login = () => {
             console.log("Login Successful!");
             navigate("/home");
         } catch(error) {
+            console.log(error, "------");
             setError(error.response.data.error);
             navigate("/");
         }
