@@ -29,10 +29,11 @@ const ProfilePage = () => {
             console.log(err)
         })};
 
+
     return(
         <div className="container-fluid bg-light">
             <div className="navbar navbar-light bg-dark text-light p-1">
-                <h1 className="m-1 text-primary">SoleCycle</h1>
+                <h1 className="m-1 text-primary">CinDB</h1>
                 <Link className="btn btn-primary m-1" to={`/home`}>Home</Link>
             </div>
             <div className="d-flex justify-content-between m-2 border border-dark rounded">
@@ -42,6 +43,20 @@ const ProfilePage = () => {
                     <Link className="btn btn-warning m-1" to={`/user/edit/${user.userName}`}>Edit</Link>
                     <button className="btn btn-danger m-1" onClick={() => handleDeleteUser(user._id)}>Delete</button>
                 </div>
+            </div>
+            <h2 className="text-center text-primary">Shoes</h2>
+            <div className="m-4 d-flex flex-wrap justify-content-around">
+                {ratings.map((rating, index) => {
+                    return (
+                        <div className="card w-25 m-2" key={index}>
+                            <div className="card-body">
+                                <h5 className="card-title">{rating.movieName}</h5>
+                                <h6 className="card-subtitle mb-2 text-muted">Rating: {rating.rating}</h6>
+                                <p className="card-text">{rating.comment}</p>
+                                <Link className="card-link btn btn-sm btn-warning mr-1" to={`/edit/${user.userName}/${rating._id}`}>Edit</Link>
+                            </div>
+                        </div>
+                    )})}
             </div>
         </div>
     )
