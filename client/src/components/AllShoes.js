@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useParams } from "react-router-dom";
 import io from 'socket.io-client'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from "react-bootstrap/Button";
@@ -11,6 +11,7 @@ import { useCart } from 'react-use-cart'
 
 
 const AllShoes = (props) => {
+    const {id, userName} = useParams();
     const [ shoeList, setShoeList ] = useState([]);
     const { addItem } = useCart();
     const navigate = useNavigate();
@@ -60,6 +61,7 @@ const AllShoes = (props) => {
         <div>
             <div className = "header">
                 <h1 className="home-header">Welcome to SoleCycle!</h1>
+                <Button href={`/user/${userName}`}>View Profile</Button>
                 <Button classname="logoutBtn" size="sm" variant="danger" onClick={()=> handleLogout()}>Logout</Button>
             </div>
             <h5>Provide sneakers with a new home and reduce waste!</h5>

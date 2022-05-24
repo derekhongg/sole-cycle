@@ -17,8 +17,8 @@ app.use(cors({
 app.use(express.json());                           /* This is new and allows JSON Objects to be posted */
 app.use(express.urlencoded({ extended: true }));   /* This is new and allows JSON Objects with strings and arrays*/
 
-require("./routes/comment.routes")(app);
 require("./routes/user.routes")(app);
+require("./routes/comment.routes")(app);
 require("./routes/sole.routes")(app);
 require("./config/mongoose.config");
 

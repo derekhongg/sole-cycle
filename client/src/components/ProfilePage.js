@@ -32,8 +32,8 @@ const ProfilePage = () => {
     return(
         <div className="container-fluid bg-light">
             <div className="navbar navbar-light bg-dark text-light p-1">
-                <h1 className="m-1 text-primary">CinDB</h1>
-                <Link className="btn btn-primary m-1" to={`/home/${user.userName}`}>Home</Link>
+                <h1 className="m-1 text-primary">SoleCycle</h1>
+                <Link className="btn btn-primary m-1" to={`/home`}>Home</Link>
             </div>
             <div className="d-flex justify-content-between m-2 border border-dark rounded">
                 <h2>@{user.userName}</h2>
