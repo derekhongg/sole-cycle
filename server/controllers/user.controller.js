@@ -23,13 +23,18 @@ const register = async (req, res) => {
         return res.status(400).json(error);
     }
 
-    const newUser = new User(body);    
+    const newUser = new User(body);
+    
+    if(!body.firstName || !body.lastName || !body.userName || !body.email || !body.password || !body.confirmPassword){
+        res.status(400).json({error: "Please fill out the required information below."})
+    }
+        
     try{
         const newUserObj = await newUser.save();
         return res.json(newUserObj);
     } catch(error) {
         console.log("error in the mongoose save block");
-        return res.status(400).json(error);
+        return res.status(400).json({error: "Error creating user"});
     }
     const result = await User.create(body);
     console.log("result", result);
@@ -91,9 +96,32 @@ const findOneUser = (req, res) => {
         })
 };
 
+const updateUser = (req, res) => {
+    User.findOneAndUpdate({_id: req.params.id}, req.body, {new:true, runValidators: true})
+    .then((updatedUser) => {
+        res.json(updatedUser)
+    })
+    .catch((err) => {
+        res.status(400).json(err)
+    })};
+
+const deleteUser = (req, res) => {
+    res.clearCookie("usertoken");
+    User.deleteOne({_id: req.params.id})
+        .then((deleteConfirmation) => {
+            res.json(deleteConfirmation);
+        })
+        .catch((err) => {
+            res.json(err)
+            console.log('error', err)
+        });
+    };
+
 module.exports = {
     register,
     login,
     logout,
-    findOneUser
+    findOneUser,
+    deleteUser,
+    updateUser
 }
