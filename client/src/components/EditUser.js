@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from "react-bootstrap/Button";
 
 const EditUser = () => {
     const navigate = useNavigate();
@@ -36,21 +38,17 @@ const EditUser = () => {
                 navigate(`/user/${userName}`);
             })
             .catch((err) => {
-                console.log("error", err.response);
+                console.log("Error Editing User", err.response);
                 setError(err.response.data.errors);
             });
     };
 
     return (
-        <div className="container-fluid bg-light">
+        <div>
             <div className="navbar navbar-light bg-dark text-light p-1">
-                <h1 className="m-1 text-primary">SoleCycle</h1>
-                <div>
-                    <Link className="btn btn-info m-1" to={`/user/${userName}`}>Profile</Link>
-                    <Link className="btn btn-primary m-1" to={`/home/${userName}`}>Home</Link>
-                </div>
+                <h1 className='m-1'>SoleCycle</h1>
             </div>
-            <h2 className="text-center">Edit {userName}'s Info</h2>
+            <h2 className="text-center mt-2">Edit {userName}'s Info</h2>
             <div className="container d-flex justify-content-around">
                 <form onSubmit={submitHandler}>
                     <input type="hidden" name="_id" value={{ _id }} />
@@ -86,7 +84,7 @@ const EditUser = () => {
                             </div>
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-success m-2" >Submit Changes</button>
+                    <Button type="submit" className="m-2" variant="success" >Submit Changes</Button>
                 </form>
             </div>
         </div>
