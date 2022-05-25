@@ -94,7 +94,7 @@ const AllShoes = (props) => {
                                     <td>{item.color}</td>
                                     <td>${item.price}</td>
                                     <td>
-                                        <Button className="actionButton" variant="success" size="sm" onClick={() => navigate(`/shoes/edit/${item._id}`)}>
+                                        <Button className="actionButton" variant="success" size="sm" onClick={() => navigate(`/shoes/edit/${userName}/${item._id}`)}>
                                             Edit
                                         </Button>
                                         <Button className="actionButton" variant="primary" size="sm" onClick={() => addItem(item._id)}>

@@ -7,7 +7,7 @@ import io from 'socket.io-client'
 import Button from 'react-bootstrap/Button'
 
 const OneShoe = (props) => {
-    const { id } = useParams();
+    const { id, userName } = useParams();
     const [ oneUser, setOneUser ] = useState({});
     const [ oneShoe, setOneShoe ] = useState({});
     const [socket] = useState( () => io(':8000') );
@@ -38,7 +38,7 @@ const OneShoe = (props) => {
             .then((res) => {
                 console.log(res.data);
                 alert(`${oneShoe.name} has been deleted.`);
-                navigate('/home')
+                navigate(`/home/${userName}`)
             })
             .catch((err) => console.log(err))
     }
@@ -54,7 +54,7 @@ const OneShoe = (props) => {
                     <Card.Text>Description: {oneShoe.description}</Card.Text>
                     <Card.Text>Price: ${oneShoe.price}</Card.Text>
                     {/* <Card.Text>Posted by: {oneUser.firstName}</Card.Text> */}
-                    <Button className="actionButton" onClick={() => navigate("/home")}>Home</Button>
+                    <Button className="actionButton" onClick={() => navigate(`/home/${userName}`)}>Home</Button>
                     <Button variant="danger" onClick={() => handleDelete(oneShoe._id)}>Delete</Button>
                 </Card.Body>
             </Card>
