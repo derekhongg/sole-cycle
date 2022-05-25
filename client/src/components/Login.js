@@ -20,9 +20,8 @@ const Login = () => {
         try{
             await axios.post("http://localhost:8000/api/user/login", loginData, {withCredentials: true});
             console.log("Login Successful!");
-            navigate("/home");
+            navigate(`/home/${userName}`);
         } catch(error) {
-            console.log(error, "------");
             setError(error.response.data.error);
             navigate("/");
         }

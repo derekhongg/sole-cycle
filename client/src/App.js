@@ -18,8 +18,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Main/>}/>
             <Route path="/user/:userName" element={<ProfilePage/>}/>
-            <Route path="/home" element={<Home/>}/>
-            <Route path="/shoes/new" element={<NewShoe/>}/>
+            <Route path="/home/:userName" element={<Home/>}/>
+            <Route path="/shoes/new/:userName" element={<NewShoe/>}/>
             <Route path="/shoes/edit/:id" element={<UpdateShoe/>}/>
             <Route path="/shoes/:id" element={<OneShoe/>}/>
             <Route path="/cart" element={<Cart/>}/>

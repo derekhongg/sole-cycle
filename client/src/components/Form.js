@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { InputGroup } from 'react-bootstrap';
 
 const ShoeForm = (props) => {
+    const { id, userName } = useParams();
     const {initialName, initialSize, initialCondition, initialColor, initialDescription, initialPrice, onSubmitProp} = props;
     const [name, setName] = useState(initialName);
     const [size, setSize] = useState(initialSize);
@@ -21,7 +22,7 @@ const ShoeForm = (props) => {
     }
     return(
         <div>
-            <Button size="sm" variant="outline-success" className="Form" onClick={() => navigate("/home")}>Home</Button>
+            <Button size="sm" variant="outline-success" className="Form" href={`/home/${userName}`}>Home</Button>
             
             <Form className = "Form" onSubmit={onSubmitHandler}>
                 <div class="me-5 mt-3">

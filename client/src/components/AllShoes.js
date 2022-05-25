@@ -11,7 +11,7 @@ import { useCart } from 'react-use-cart'
 
 
 const AllShoes = (props) => {
-    const {id, userName} = useParams();
+    const { id, userName} = useParams();
     const [ shoeList, setShoeList ] = useState([]);
     const { addItem } = useCart();
     const navigate = useNavigate();
@@ -65,7 +65,7 @@ const AllShoes = (props) => {
                 <Button classname="logoutBtn" size="sm" variant="danger" onClick={()=> handleLogout()}>Logout</Button>
             </div>
             <h5>Provide sneakers with a new home and reduce waste!</h5>
-            <Button className="actionButton" size="sm" variant="danger" onClick={() => navigate(`/shoes/new`)}>
+            <Button className="actionButton" size="sm" variant="danger" onClick={() => navigate(`/shoes/new/${userName}`)}>
                 List Sneaker
             </Button>
             {

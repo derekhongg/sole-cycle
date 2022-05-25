@@ -5,7 +5,7 @@ import ShoeForm from './Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const UpdateShoe = (props) => {
-    const { id } = useParams();
+    const { id, userName } = useParams();
     const [errors, setErrors] = useState({});
     const [name, setName] = useState("");
     const [size, setSize] = useState("");
