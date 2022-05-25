@@ -69,7 +69,7 @@ const AllShoes = (props) => {
                 List Sneaker
             </Button>
             {
-                <Table striped border hover>
+                <Table striped border hover className="main-table">
                     <thead>
                         {
                             <tr>

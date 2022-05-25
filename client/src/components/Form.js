@@ -22,9 +22,9 @@ const ShoeForm = (props) => {
     }
     return(
         <div>
-            <Button size="sm" variant="outline-success" className="Form" href={`/home/${userName}`}>Home</Button>
+            <Button size="sm"  className="home-button" href={`/home/${userName}`}>Home</Button>
             
-            <Form className = "Form" onSubmit={onSubmitHandler}>
+            <Form className="Form" onSubmit={onSubmitHandler}>
                 <div class="me-5 mt-3">
                     <p>Shoe Details</p>
                     <Form.Group>
