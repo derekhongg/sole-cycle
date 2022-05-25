@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import io from 'socket.io-client';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,6 +7,7 @@ import ShoeForm from "./Form";
 
 
 const NewShoe = (props) => {
+    const { userName } = useParams();
     const [errors, setErrors] = useState({});
     const [name, setName] = useState("");
     const [size, setSize] = useState("");
@@ -32,7 +33,7 @@ const NewShoe = (props) => {
                     console.log(res.data);
                     socket.emit("added_new_shoe", res.data);
                     socket.disconnect();
-                    navigate("/home")
+                    navigate(`/home/${userName}`)
                 }
             })
             .catch((err) => {

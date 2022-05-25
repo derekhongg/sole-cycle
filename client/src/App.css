@@ -1,7 +1,8 @@
 .App{
   height: 1200px;
   width: 100%;
-  background-image: url(https://img.freepik.com/free-vector/pastel-vector-dull-pastel-abstract-textured-background_53876-110546.jpg?t=st=1652378673~exp=1652379273~hmac=ad1ca6316ed74421307d467568ee84c9d229b1e7ddd64db56d07f12c64ad4945&w=1800);
+  color: white;
+  background-color: #6d7975;
   font-family: Arial, Helvetica, sans-serif;
 }
 .App-logo {
@@ -60,7 +61,7 @@
   margin-left: 50px;
 }
 #cardInfo{
-  background-image: url(https://img.freepik.com/free-vector/pastel-vector-dull-pastel-abstract-textured-background_53876-110546.jpg?t=st=1652378673~exp=1652379273~hmac=ad1ca6316ed74421307d467568ee84c9d229b1e7ddd64db56d07f12c64ad4945&w=1800);
+  background-color: #6d6e80;
   margin-left: auto;
   margin-right: auto;
 }

@@ -86,7 +86,7 @@ const AllShoes = (props) => {
                             shoeList.map((item, index) => {
                                 return(
                                 <tr name={item.name} size={item.size} color={item.color} price={item.price} item={item} key={index}>
-                                    <td><Link to={`/shoes/${item._id}`}>
+                                    <td><Link to={`/shoes/${userName}/${item._id}`}>
                                         {item.name}
                                     </Link>
                                     </td>

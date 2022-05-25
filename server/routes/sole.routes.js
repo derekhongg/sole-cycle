@@ -7,5 +7,6 @@ module.exports = (app) => {
     app.post("/api/shoes", jwtMiddleware.authenticateJwt, ShoeController.createNewShoe);
     app.get("/api/shoes/:id", jwtMiddleware.authenticateJwt, ShoeController.findOneShoe);
     app.put("/api/shoes/:id", jwtMiddleware.authenticateJwt, ShoeController.updateShoe);
+    app.get("/api/shoes/:userName", ShoeController.findShoesByUser);
     app.delete("/api/shoes/:id", jwtMiddleware.authenticateJwt, ShoeController.deleteShoe);
 }
