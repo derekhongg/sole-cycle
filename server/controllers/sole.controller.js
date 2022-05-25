@@ -69,14 +69,14 @@ const updateShoe = (req, res) => {
 }
 
 const findShoesByUser = (req, res) => {
-    Shoe.find({userName: req.params.userName})
+    Shoe.find({userName:req.params.userName})
         .then((shoes) => {
             res.json(shoes)
         })
         .catch((err) => {
             res.json(err)
         })
-}
+};
 
 const deleteShoe = (req, res) => {
     Shoe.deleteOne({_id: req.params.id})
@@ -87,8 +87,8 @@ const deleteShoe = (req, res) => {
 module.exports = {
     findAllShoes,
     updateShoe,
-    deleteShoe,
     createNewShoe,
     findOneShoe,
-    findShoesByUser
+    findShoesByUser,
+    deleteShoe
 };

@@ -64,6 +64,7 @@ const ProfilePage = () => {
                                 <h6 className="card-subtitle mb-2 text-muted">Shoe: {shoes.name}</h6>
                                 <p className="card-text">{shoes.comment}</p>
                                 <Link className="card-link btn btn-sm btn-warning mr-1" to={`/edit/${user.userName}/${shoes._id}`}>Edit</Link>
+                                
                             </div>
                         </div>
                     )})}
